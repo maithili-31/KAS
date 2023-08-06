@@ -1103,9 +1103,9 @@ footer p {
 
 
 
+/* commented to change the design of the home remedies button */
 
-
-.remedies_button{
+/* .remedies_button{
   width: 25vw;
   background-color: #000000;
   text-align: center;
@@ -1118,14 +1118,14 @@ footer p {
   position: relative;
   display: inline-block;
   padding: 25px 30px;
-  /* margin:auto; */
+  margin:auto;
   color: #03e9f4;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 4px;
   overflow: hidden;
-  /* margin-right: 50px; */
+  margin-right: 50px;
 }
 
 .remedies_button {
@@ -1230,10 +1230,240 @@ footer p {
   100% {
     bottom: 100%;
   }
-}
+} */
 
 body {
   background-color: #000 !important;
 }
 
 
+/* ----------------------------------------- new analysis card design --------------------------------------- */
+
+.main_container {
+  height: 600px;
+  width: 450px;
+  border-radius: 5px;
+  border: none;
+}
+
+.main_container:nth-child(3) {
+  background: #26474c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #26474c,
+    #0d3e44 
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #26474c,
+    #0d3e44 
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main_container:hover {
+  /* box-shadow: rgba(212, 202, 14, 0.35) 0px 5px 15px; */
+  /* box-shadow: rgba(17, 85, 188, 0.20) 10px 8px 36px 10px, rgba(23, 6, 215, 0.16) 0px 0px 0px 1px; */
+  box-shadow: 0 5px 15px rgba(102, 252, 241, 0.8);
+  transform: scale(1);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.report_heading {
+  font-family: serif;
+  font-size: 2.2rem !important;
+  font-weight: 600;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main_container p {
+  margin-top: 10px;
+}
+
+.report_info-first {
+  margin-top: 35px !important;
+}
+
+.report_info-left {
+  background: -webkit-linear-gradient(#eee, #9a9797);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main_container:hover .report_info-right {
+  color: rgb(41, 216, 228);
+  transition: 0.2s ease-in;
+}
+
+/* .home_remedies_button {
+  color: #fff;
+  font-size: 12px;
+  
+  @media(min-width: 600px) {
+    left: 50%;
+    position: absolute; 
+    transform: translate(-50%, 0);
+    top: 90%;
+  }
+  
+  @media(max-height: 500px) {
+    left: 0;
+    position: relative;
+    top: 0;
+    transform: translate(0, 0);
+  }
+  
+  a {
+    background: rgba(#fff, 0);
+    border-bottom: 1px solid;
+    color: #fff;
+    line-height: 1.4;
+    padding: .25em;
+    text-decoration: none;
+    
+    &:hover {
+      background: rgba(#fff, 1);
+      color: #E1332D;
+    }
+  }
+} */
+
+
+/* .home_remedies_button .btn {
+  color: #fff;
+  cursor: pointer;
+  // display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;  */
+  
+/* //   @media(min-width: 400px) {
+//     display: inline-block;
+//     margin-right: 2.5em;
+  
+//     &:nth-of-type(even) {
+//       margin-right: 0;
+//     }
+//   } */
+  
+  /* @media(min-width: 600px) {
+      
+    margin: 0 1em 2em;
+   */
+/* //     &:nth-of-type(even) {
+//       margin-right: 2.5em;
+//     }
+    
+//     &:nth-of-type(5) {
+//       margin-right: 0;
+//     } */
+    
+  /* }
+  
+  &:hover { text-decoration: none; }
+  
+}
+
+.btn-2 {
+  letter-spacing: 0;
+}
+
+.btn-2:hover,
+.btn-2:active {
+letter-spacing: 5px;
+}
+
+.btn-2:after,
+.btn-2:before {
+backface-visibility: hidden;
+border: 1px solid rgba(#fff, 0);
+bottom: 0px;
+content: " ";
+display: block;
+margin: 0 auto;
+position: relative;
+transition: all 280ms ease-in-out;
+width: 0;
+}
+
+.btn-2:hover:after,
+.btn-2:hover:before {
+backface-visibility: hidden;
+border-color: #fff;
+transition: width 350ms ease-in-out;
+width: 70%;
+}
+
+.btn-2:hover:before {
+bottom: auto;
+top: 0;
+width: 70%;
+} */
+
+.home_remedies_button {
+  text-align: center;
+  color: #fff;
+}
+
+.home_remedies_button a {
+  color: #fff;
+  cursor: pointer;
+  /* // display: block; */
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  letter-spacing: 1px;
+  /* max-width: 160px;  */
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 15rem; 
+
+  background: #26474c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #26474c,
+    #0d3e44  
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #26474c,
+    #0d3e44  
+  );
+}
+
+.home_remedies_button a:hover {
+  color: #36d8e1;
+  cursor: pointer;
+  /* // display: block; */
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  /* max-width: 160px;  */
+  letter-spacing: 2px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* width: 100%; */
+  /* width: 18rem;  */
+  transform: scaleX(1.1); 
+  transition: all 360ms ease-in-out;
+}
+
+.home_remedies_button a:hover {
+  /* box-shadow: rgba(17, 85, 188, 0.20) 10px 8px 36px 10px, rgba(23, 6, 215, 0.16) 0px 0px 0px 1px; */
+  box-shadow: 0 5px 15px rgba(102, 252, 241, 0.8);
+  transform: scale(1);
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
