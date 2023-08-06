@@ -60,18 +60,18 @@
         <div class="container">
                   <div class="row">
                     <div class="col-md-10 text-center">
-                      <h3 class="animate-charcter"> RESULTS </h3>
+                      <h3 class="animate-charcter results_heading"> RESULTS </h3>
                     </div>
                   </div>
                 </div>
         <p class="hero__description"></p>
-        <div class="services__card" id="card">
-          <img src="{{url_for('static',filename='download.jpg')}}" alt="img not found" >
+        <div class="services__card main_container" id="card">
+          <img src="{{url_for('static',filename='man.jpeg')}}" alt="img not found" >
           <div class="card1">
-            <h2 class="hero__heading">ANALYSIS REPORT</h2>
-            <p>Gender : {{ gender}} </p>
-            <p>Skin type : {{ skinType }}</p>
-            <p>Skin disease : {{ skinDisease }} </p>
+            <h2 class="hero__heading report_heading">ANALYSIS REPORT</h2>
+            <p class="report_info report_info-first"><span class="report_info-left">Gender :</span> <span class="report_info-right">{{ gender}}</span> </p>
+            <p class="report_info"><span class="report_info-left">Skin type :</span> <span class="report_info-right"> {{ skinType }}</span></p>
+            <p class="report_info"><span class="report_info-left">Skin disease :</span> <span class="report_info-right"> {{ skinDisease }} </span></p>
           <!-- <p>SKin Tone : </p> -->
 
           </div>
@@ -86,18 +86,18 @@
         <div class="container">
                   <div class="row">
                     <div class="col-md-10 text-center">
-                      <h3 class="animate-charcter"> RESULTS </h3>
+                      <h3 class="animate-charcter results_heading"> RESULTS </h3>
                     </div>
                   </div>
                 </div>
-        <p class="hero__description"></p>
+        <p class="hero__description main_container"></p>
         <div class="services__card" id="card">
-          <img src="{{url_for('static',filename='images.jpg')}}" alt="img not found" >
+          <img src="{{url_for('static',filename='woman.jpeg')}}" alt="img not found" >
           <div class="card1">
-            <h2 class="hero__heading">ANALYSIS REPORT</h2>
-            <p>Gender : {{ gender}} </p>
-            <p>Skin type : {{ skinType }}</p>
-            <p>Skin disease : {{ skinDisease }} </p>
+            <h2 class="hero__heading report_heading">ANALYSIS REPORT</h2>
+            <p class="report_info report_info-first"><span class="report_info-left">Gender :</span> <span class="report_info-right">{{ gender}}</span> </p>
+            <p class="report_info"><span class="report_info-left">Skin type :</span> <span class="report_info-right">{{ skinType }}</span></p>
+            <p class="report_info"><span class="report_info-left">Skin disease :</span> <span class="report_info-right">{{ skinDisease }} </span></p>
           <!-- <p>SKin Tone : </p> -->
 
           </div>
@@ -141,6 +141,18 @@ Don't understand!
     background-position: 200% center;
   }
 }
+
+/* ---------------------------------------- new card design -------------------------------------------- */
+
+.results_heading {
+  font-size: 72px;
+  background: -webkit-linear-gradient(#359fd4, #1856c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------------------------------------- new card design -------------------------------------------- */
+
 </style>
 
 
@@ -691,12 +703,12 @@ Don't understand!
 <!--Don't understand!-->
 <!--{% endif %}-->
 
-<div class="remedies_button" id="remedies">
-  <a href="https://www.indiatvnews.com/lifestyle/beauty-skin-care-tips-7-effective-home-remedies-for-healthy-and-flawless-skin-466671" target="_blank">
+<div class="remedies_button home_remedies_button" id="remedies">
+  <a class="btn btn-2" href="https://www.indiatvnews.com/lifestyle/beauty-skin-care-tips-7-effective-home-remedies-for-healthy-and-flawless-skin-466671" target="_blank">
+    <!-- <span></span>
     <span></span>
     <span></span>
-    <span></span>
-    <span></span>
+    <span></span> -->
     Home Remedies
   </a>
 </div>
