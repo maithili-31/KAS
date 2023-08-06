@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static\css\main.css">
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+
+{% if gender == 'man'%}
+<div class="conti">
+  <h2 class="title">
+    <span class="title-word title-word-1">YOU</span>
+    <span class="title-word title-word-2">ARE</span>
+    <span class="title-word title-word-3">HANDSOME</span>
+    <span class="title-word title-word-4">{{ gender }}</span>
+  </h2>
+
+      <h2 class="title">
+    <span class="title-word title-word-1">but with</span>
+    <span class="title-word title-word-2">a</span>
+    <span class="title-word title-word-3">little</span>
+    <span class="title-word title-word-4">{{ skinType }} skin</span>
+  </h2>
+</div>
+
+{% elif gender == 'woman'%}
+<div class="conti">
+  <h2 class="title">
+    <span class="title-word title-word-1">You</span>
+    <span class="title-word title-word-2">are a</span>
+    <span class="title-word title-word-3">beautiful</span>
+    <span class="title-word title-word-4">{{ gender }}</span>
+  </h2>
+
+      <h2 class="title">
+    <span class="title-word title-word-1">With</span>
+    <span class="title-word title-word-2">a</span>
+    <span class="title-word title-word-3">little</span>
+    <span class="title-word title-word-4">{{ skinType }} skin</span>
+  </h2>
+</div>
+{% else %}
+Don't understand!
+{% endif %}
+
+<style>
+    .title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.conti {
+  display: grid;
+  place-items: center;
+  text-align: top;
+  height: 20vh
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 50;
+  font-size: 2.5vw;
+  text-transform: uppercase;
+}
+</style>
+
+
+      </div>
+        <div class = "products">
+            <div class = "container">
+                <h1 class = "lg-title">Special Skin Products With Offers</h1>
+                <p class = "text-light">Here are some of the best products handpicked according to your skintype</p>
+                <p class = "text-light">Because..... "Beauty is in the skin"</p>
+
+                <div class = "product-items">
+                    {% if gender == 'man'%}
+                        {% if skinType == 'dry' %}
+                                <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/51QsQUvQrqL._SL1000_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Nivea, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/51W3tFhF5-L._SL1000_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Garnier, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://www.jiomart.com/images/product/600x600/491229717/pond-s-men-pollution-out-face-wash-100-g-product-images-o491229717-p491229717-1-202203152034.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">POND'S, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://cdn.shopify.com/s/files/1/0272/4714/9155/products/himalaya-men-pimple-clear-neem-face-wash_800x.jpg?v=1627641459" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Himalaya, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+
+                        {% elif skinType == 'oily' %}
+                                <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/51QsQUvQrqL._SL1000_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Nivea, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/51W3tFhF5-L._SL1000_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Garnier, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://www.jiomart.com/images/product/600x600/491229717/pond-s-men-pollution-out-face-wash-100-g-product-images-o491229717-p491229717-1-202203152034.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">POND'S, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://cdn.shopify.com/s/files/1/0272/4714/9155/products/himalaya-men-pimple-clear-neem-face-wash_800x.jpg?v=1627641459" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Himalaya, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+
+                        {% endif %}
+
+
+                    {% elif gender == 'woman'%}
+                        {% if skinType == 'dry' %}
+                                <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/61LmABL6JKL._SY355_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Nivea, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://www.businessinsider.in/thumb/msid-77721370,width-640,resizemode-4/Master.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Biotique, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://cosmeticsarenas.com/wp-content/uploads/2020/09/Clean-Clear-Foaming-Face-Wash-Best-Face-Wash-for-Women-in-India.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Clean & Clear, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://lh3.googleusercontent.com/0-aMjSjn8flhDy4jAruu5_U1M_kOvjCf2wIqemLYQU3Ixc5AiHakgNLVhZa3cg1VIsrsGSfVVLjnir23mVnUSyXM6nw=w1000" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Himalaya, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+
+                        {% elif skinType == 'oily' %}
+                                <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/61LmABL6JKL._SY355_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Nivea, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://www.businessinsider.in/thumb/msid-77721370,width-640,resizemode-4/Master.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Biotique, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://cosmeticsarenas.com/wp-content/uploads/2020/09/Clean-Clear-Foaming-Face-Wash-Best-Face-Wash-for-Women-in-India.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Clean & Clear, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://lh3.googleusercontent.com/0-aMjSjn8flhDy4jAruu5_U1M_kOvjCf2wIqemLYQU3Ixc5AiHakgNLVhZa3cg1VIsrsGSfVVLjnir23mVnUSyXM6nw=w1000" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Himalaya, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+
+                        {% endif %}
+
+
+                    {% else %}
+                    Don't understand!
+                    {% endif %}
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class = "product-collection">
+            <div class = "container">
+                <div class = "product-collection-wrapper">
+                    <!-- product col left -->
+                    <div class = "product-col-left flex">
+                        <div class = "product-col-content">
+                            <h2 class = "sm-title">men's Skin Products </h2>
+                            <h2 class = "md-title">men's collection </h2>
+                            <p class = "text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae consequatur facilis eligendi quibusdam voluptatibus exercitationem autem voluptatum, beatae architecto odit, quisquam repellat. Deleniti, architecto ab.</p>
+                            <button type = "button" class = "btn-dark">Shop now</button>
+                        </div>
+                    </div>
+
+                    <!-- product col right -->
+                    <div class = "product-col-right">
+                        <div class = "product-col-r-top flex">
+                            <div class = "product-col-content">
+                                <h2 class = "sm-title">women's skin products </h2>
+                                <h2 class = "md-title">women's collection </h2>
+                                <p class = "text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae consequatur facilis eligendi quibusdam voluptatibus exercitationem autem voluptatum, beatae architecto odit, quisquam repellat. Deleniti, architecto ab.</p>
+                                <button type = "button" class = "btn-dark">Shop now</button>
+                            </div>
+                        </div>
+
+                        <div class = "product-col-r-bottom">
+                            <!-- left -->
+                            <div class = "flex">
+                                <div class = "product-col-content">
+                                    <h2 class = "sm-title">summer sale </h2>
+                                    <h2 class = "md-title">Extra 50% Off </h2>
+                                    <p class = "text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae consequatur facilis eligendi quibusdam voluptatibus exercitationem autem voluptatum, beatae architecto odit, quisquam repellat. Deleniti, architecto ab.</p>
+                                    <button type = "button" class = "btn-dark">Shop now</button>
+                                </div>
+                            </div>
+                            <!-- right -->
+                            <div class = "flex">
+                                <div class = "product-col-content">
+                                    <h2 class = "sm-title">Skin care </h2>
+                                    <h2 class = "md-title">best sellers </h2>
+                                    <p class = "text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae consequatur facilis eligendi quibusdam voluptatibus exercitationem autem voluptatum, beatae architecto odit, quisquam repellat. Deleniti, architecto ab.</p>
+                                    <button type = "button" class = "btn-dark">Shop now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

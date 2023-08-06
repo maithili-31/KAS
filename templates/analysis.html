@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KAS</title>
+    <link rel="stylesheet" href="./static/css/style_analysis.css" />
+    <link rel="stylesheet" href="./static/css/1.3 grid.css" />
+    <script
+      src="https://kit.fontawesome.com/de4468a7e6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  </head>
+    <body onload="myFunction()">
+<div id="loading"></div>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top">
+      <!-- The video -->
+      <!-- <video autoplay muted loop id="myVideo">
+        <source src="Pexels Videos 4552.mp4" type="video/mp4" />
+      </video> -->
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo">KAS</a>
+        <!-- <h1>KEEN ABOUT SKIN</h1> -->
+        <!-- <img src="" alt="img not found"> -->
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <li class="navbar__item">
+              <a href="/" class="navbar__links" id="about-page">Home</a>
+            </li>
+            <a href="#home" class="navbar__links" id="home-page"> Prediction </a>
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="about-page">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#services" class="navbar__links" id="services-page"
+              >Products</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+
+<h1>ANALYSIS REPORT</h1>
+
+
+{% if gender == 'man'%}
+<div class="hero" id="home">
+      <div class="hero__container">
+        <div class="container">
+                  <div class="row">
+                    <div class="col-md-10 text-center">
+                      <h3 class="animate-charcter"> RESULTS </h3>
+                    </div>
+                  </div>
+                </div>
+        <p class="hero__description"></p>
+        <div class="services__card" id="card">
+          <img src="{{url_for('static',filename='download.jpg')}}" alt="img not found" >
+          <div class="card1">
+            <h2 class="hero__heading">ANALYSIS REPORT</h2>
+            <p>Gender : {{ gender}} </p>
+            <p>Skin type : {{ skinType }}</p>
+            <p>Skin disease : {{ skinDisease }} </p>
+          <!-- <p>SKin Tone : </p> -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+{% elif gender == 'woman'%}
+<div class="hero" id="home">
+      <div class="hero__container">
+        <div class="container">
+                  <div class="row">
+                    <div class="col-md-10 text-center">
+                      <h3 class="animate-charcter"> RESULTS </h3>
+                    </div>
+                  </div>
+                </div>
+        <p class="hero__description"></p>
+        <div class="services__card" id="card">
+          <img src="{{url_for('static',filename='images.jpg')}}" alt="img not found" >
+          <div class="card1">
+            <h2 class="hero__heading">ANALYSIS REPORT</h2>
+            <p>Gender : {{ gender}} </p>
+            <p>Skin type : {{ skinType }}</p>
+            <p>Skin disease : {{ skinDisease }} </p>
+          <!-- <p>SKin Tone : </p> -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+{% else %}
+Don't understand!
+{% endif %}
+
+
+<style>
+    .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 80px;
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+<div class="main" id="about">
+      <div class="main__container">
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+  </div>
+
+
+
+
+
+
+
+{% if gender == 'man'%}
+  {% if skinType == 'oily' %}
+
+
+    <!--Male OILY-->
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner ">
+        <div class="carousel-item active carousel_changes">
+          <div class="main__content">
+              <!-- <h1>What do we do?</h1> -->
+              <!-- <h2>We help businesses scale</h2> -->
+              <h1 >Oily Skin Type :</h1>
+              <!-- <p class="color_adding" id="color_adding"><span>-->
+                <p>Oil helps preserve the skin, and people with oily skin tend to have thicker skin and fewer wrinkles.<br>
+                The key is to strike a balance between having too much oil and maintaining your skin’s natural moisture.</p>
+                <p>Although , oily skin can clog pores and lead to increased acne breakouts.</span></p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="main__content">
+                <p></p>
+                <h1> This can help :</h1>
+                <p>Citrus fruits are loaded with vitamin C. So stock up on oranges,<br /> guavas, kiwis and papayas
+                because the content of vitamin C and detoxifying components<br /> in them flushes out extra oil from your skin, making it less greasy</p>
+
+              </div>
+        </div>
+
+        <div class="carousel-item">
+        <div class="main__content">
+
+            <h1>DO'S</h1>
+            <p>1. Wash Your Face Twice A Day.
+              <br>
+              2.Moisturize Your Skin Everyday.
+             <br>
+             3.Exfoliate Once A Week.
+             <br>
+             4.Use A Toner.
+             <br>
+             5.Use A Face Mask.</p>
+
+          </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="main__content">
+            <h1>DON'TS</h1>
+            <p></p>
+            <p>1.DON’T use oil-based or alcohol-based cleansers.
+              <br>
+              2.DON’T touch your face throughout the day.
+              <br>
+              3.Avoid touching your face.
+              <br>
+              4.Over-wash as it can deprive your skin of essential oils.
+              <br>
+
+              <br>
+            </p>
+          </div>
+      </div>
+      </div>
+
+    {% elif skinType == 'dry' %}
+
+
+        <!--Male DRY-->
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="main__content">
+              <!-- <h1>What do we do?</h1> -->
+              <!-- <h2>We help businesses scale</h2> -->
+              <h1 >Dry Skin Type :</h1>
+              <!-- <p class="color_adding" id="color_adding"><span>-->
+                <p>1.Dry skin may be caused because of :
+                    <br>
+                    2.using harsh deodorants or cleaning products.
+                    <br>
+                    3.taking long, hot showers or baths
+                    <br>
+                    4.living in cold, dry conditions.
+                    <br>
+                    5.Sometimes, dry skin can be a result of underlying health conditions.
+</p>
+<!--                <p>Although , oily skin can clog pores and lead to increased acne breakouts.</span></p>-->
+            </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="main__content">
+                <p></p>
+                <h1> This can help :</h1>
+                <p>Dry skin can be a symptom of certain nutrient deficiencies, including:
+vitamin A,
+vitamin C,
+vitamin D,
+vitamin E,
+zinc
+
+                   <br>
+1. First of all: drink plenty of water!<br>
+<!--.s, chia seeds and linseed oil can fill the skin’s lipid reserves from the inside and stabilise its natural protective barrier.-->
+2. Orange-coloured fruits and vegetables<br>
+3. Foods with zinc.<br>
+<!--6. Foods to avoid to avoid anything that drains moisture from the body – such as alcohol, caffeine in coffee and tea, and excessive salt.</p>-->
+
+
+
+              </div>
+        </div>
+
+        <div class="carousel-item">
+        <div class="main__content">
+
+            <h1>DO'S</h1>
+<!--            <p>1.The Do’s of Men’s Skincare-->
+<!--              <br>-->
+            <p>
+              2.Have a separate routine for your beard
+             <br>
+             3.Moisturize your face thoroughly<br>
+4.Never skip sunscreen<br>
+5.Use a cooling face cream<br>
+6.Take hydration seriously<br>
+7.Start incorporating anti-aging products in your routine.</p>
+
+          </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="main__content">
+            <h1>DON'TS</h1>
+            <p></p>
+            <p>1.Don’t pick or exacerbate the acne on your face <br>
+2.Don’t use products with sulfate and alcohol<br>
+3.Don’t hoard onto old and rusty razor blades<br>
+4.Don’t apply greasy products on your face
+
+              <br>
+            </p>
+          </div>
+      </div>
+      </div>
+  {% endif %}
+
+
+{% elif gender == 'woman'%}
+  {% if skinType == 'oily' %}
+
+
+        <!--WOMAN OILY-->
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="main__content">
+              <!-- <h1>What do we do?</h1> -->
+              <!-- <h2>We help businesses scale</h2> -->
+              <h1 >Oily Skin Type :</h1>
+              <!-- <p class="color_adding" id="color_adding"><span>-->
+                <p>Everybody's skin produces oil. <br>
+<!--Your sebaceous glands produce sebum, an oily or waxy substance that moisturizes and protects your skin. -->
+                    Oily skin happens when your glands produce too much sebum, which can lead to a greasy surface, clogged pores, and acne.
+Oily skin is perfectly normal.<br>
+There are many reasons for oily skin, including stress, humidity, genetics, and fluctuating hormones.
+<!--ily skin is caused by overactive sebaceous glands that are affected by a variety of stimuli such as hormones, humidity, heat and even stimulation by aggressive scrubbing or washing. “The body naturally produces oil to keep the skin moisturized and healthy,” states-->
+<!--.<br>-->
+            </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="main__content">
+                <p></p>
+                <h1> This can help :</h1>
+                <p>Citrus fruits are loaded with vitamin C. So stock up on oranges,<br /> guavas, kiwis and papayas
+                because the content of vitamin C and detoxifying components<br /> in them flushes out extra oil from your skin, making it less greasy</p>
+
+              </div>
+        </div>
+
+        <div class="carousel-item">
+        <div class="main__content">
+
+            <h1>DO'S</h1>
+            <p>1.Always wash hands before cleansing your face to protect your skin from bacteria<br>
+2.Use a gel-based or cream cleanser 2 to 3 times a day<br>
+3.Use warm water to rinse — not hot — as hot water will increase production of oil.<br>
+4.Use toner on the oily parts of your face.<br>
+/Moisturize — oily skin needs moisture just as much as any other skin type.<br>
+                5.Use a light, oil-free moisturizer.<br>
+.</p>
+
+          </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="main__content">
+            <h1>DON'TS</h1>
+            <p></p>
+            <p>1.DON’T use oil-based or alcohol-based cleansers.
+              <br>
+              2.DON’T touch your face throughout the day.
+              <br>
+              3.Avoid touching your face and rough physical scrubs.
+              <br>
+              4.Avoid thick moisturisers and creams, and instead opting for a gel-based moisturiser that will hydrate your skin without piling on the grease.
+<!--) Face oils like coconut oil-->
+<!--) Rough physical scrubs-->
+<!--3) Alcohol-based products -->
+<!--) Artificial dyes-->
+<!--Often used in coloured cosmetics like lipsticks and blushes, D&C dyes are made from petroleum and coal tar. While some skin types can handle these without an issue, using them on acne-prone skin can worsen the issue. -->
+<!--.-->
+              <br>
+
+              <br>
+            </p>
+          </div>
+      </div>
+      </div>
+
+    {% elif skinType == 'dry' %}
+
+
+        <!--WOMAN DRY-->
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="main__content">
+              <!-- <h1>What do we do?</h1> -->
+              <!-- <h2>We help businesses scale</h2> -->
+              <h1 >Dry Skin Type :</h1>
+              <!-- <p class="color_adding" id="color_adding"><span>-->
+                <p>In Women, dry skin can be caused because of:<br> 1.Environmental triggers
+2.Certain skin diseases.<br>
+3.Systemic diseases. <br>
+4.In addition to skin conditions, systemic diseases such as thyroid disease and diabetes, c.<br>
+5.Lack of moisture.<br>
+6.Nutritional deficiencies and lack of certain vitamins and minerals, particularly vitamin B-6 and zinc, can cause dry</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="main__content">
+                <p></p>
+                <h1> This can help :</h1>
+                <p>We recommend incorporating citrus fruits, broccoli, and foods
+ with a high water content (think cucumbers, celery,
+ watermelon, and tomatoes.) <br>Our skin cells rely heavily on
+fluid. Dry, flaky skin is a result of two main
+ problems: Lack of hydration and lack of healthy fat.<br> In addition to foods with a high water content, ensuring that you have an adequate
+                    consumption of healthy fats from foods like fatty fish, coconut oil, avocados, flax seeds, and chia seeds.reasy</p>
+
+              </div>
+        </div>
+
+        <div class="carousel-item">
+        <div class="main__content">
+
+            <h1>DO'S</h1>
+            <p>1.Take quick baths or showers with warm water and mild, unscented cleansers.
+                <br>
+2.Moisturize with thicker creams or ointments instead of lotion. <br>
+<!--                Good bets have jojoba or olive oil or shea butter.-->
+4.Avoid products that can strip your natural skin oils, including alcohol-based toners, retinoids, and alpha-hydroxy acid.<br>
+3.Wear gloves whenever your hands may get wet, including dishwashing and cleaning the bathroom.
+.</p>
+
+          </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="main__content">
+            <h1>DON'TS</h1>
+            <p>1.DRYING YOUR FACE BEFORE APPLYING MOISTURIZER.<br>
+2.BEING AFRAID TO USE OILS.<br>
+3.TAKING STEAMING HOT SHOWERS.<br>
+4.CLEANSING TOO OFTEN OR TOO HARSHLY.<br>
+5.AVOIDING EXFOLIATIon.<br>
+6.WEARING MOSTLY MATTE MAKEUP.<br>
+7.SKIPPING SUN PROTECTION.<br>
+8.SKIP SERUMS.
+              <br>
+
+              <br>
+            </p>
+          </div>
+      </div>
+      </div>
+  {% endif %}
+
+
+{% else %}
+Don't understand!
+{% endif %}
+
+
+
+
+
+
+
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+</div>
+</div>
+
+
+
+<!--<style>-->
+<!--.carousel-inner{-->
+<!--    padding-top: 0;-->
+<!--    }-->
+<!--</style>-->
+
+    <!-- About Section -->
+<!--     <div class="main" id="about">
+      <div class="main__container">
+
+        <div class="main__content">
+
+          <h1>Oily Skin Type :</h1>
+
+            <p>Oil helps preserve the skin, and people with oily skin tend to have thicker skin and fewer wrinkles.<br>
+            The key is to strike a balance between having too much oil and maintaining your skin’s natural moisture.</p>
+            <p>Although , oily skin can clog pores and lead to increased acne breakouts.</span></p>
+        </div>
+          <div class="main__content">
+            <p></p>
+            <h1> This can help :</h1>
+            <p>Citrus fruits are loaded with vitamin C. So stock up on oranges,<br /> guavas, kiwis and papayas
+            because the content of vitamin C and detoxifying components<br /> in them flushes out extra oil from your skin, making it less greasy</p>
+
+          </div>
+      </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+<!--{% if gender == 'man'%}-->
+<!--  {% if skinType == 'oily' %}-->
+<!--    &lt;!&ndash; Services Section &ndash;&gt;-->
+<!--    <div class="services" id="services">-->
+<!--      &lt;!&ndash; <h1>Our Services</h1> &ndash;&gt;-->
+<!--      <h1>Products for you</h1>-->
+<!--      <div class="services__wrapper">-->
+<!--        <div class="services__card12">-->
+<!--          <img src="https://ustraa.cdn.imgeng.in/media/catalog/product/f/r/front_27_1.jpg" alt="img not found" >-->
+<!--          <h2>Face wash</h2>-->
+<!--          &lt;!&ndash; <p>AI Powered techn</p> &ndash;&gt;-->
+<!--          <a href="https://www.google.com/search?q=face+wash+for+oily+skin+men&sxsrf=ALiCzsbjc1MON4XMTBXByqB-dwfaSd-MSA:1653153669711&source=lnms&tbm=shop&sa=X&ved=2ahUKEwji1PepjfH3AhVd63MBHfOvBMAQ_AUoAXoECAEQAw&biw=1536&bih=754&dpr=1.25" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--        </div>-->
+<!--        <div class="services__card12">-->
+<!--          <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTPqFnldCZjmeIHbSVuODPx4mkl6kbZHzXaI-GAaJ9ygkdp3Wgi1ZGL4mqO956NceEZUSqE7r4f6eKM&#45;&#45;FRH11JTSs35L_rhhx3nZBax4et&usqp=CAE" alt="img not found">-->
+<!--          <h2>Creams</h2>-->
+<!--          &lt;!&ndash; <p>Take the leap</p> &ndash;&gt;-->
+<!--          <a href="https://www.google.com/search?tbm=shop&sxsrf=ALiCzsbMCaOy1gpoMbgjyZtYzvxeqhHgfQ:1653157555738&q=cream+for+oily+skin+men&spell=1&sa=X&ved=0ahUKEwjlzPfmm_H3AhV2RmwGHcfWATMQBQjiCygA" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--        </div>-->
+<!--        &lt;!&ndash; <div class="services__wrapper"> &ndash;&gt;-->
+<!--        <div class="services__card12">-->
+<!--          <img src="https://cdn3.foxy.in/pictures/product/image/56308/236730/minimalist-salicylic-acid-2-serum-for-blackheads-pore-tightening-oil-control-acne-breakouts-30ml.png?nan=nan&format=webp&width=1024" alt="img not found" >-->
+<!--          <h2>Gels and serums</h2>-->
+<!--            &lt;!&ndash; <p>AI Powered techn</p> &ndash;&gt;-->
+<!--          <a href="https://www.google.co.in/search?q=serums+for+men+oily+skin&sxsrf=ALiCzsaaqig4ePW0WiQucIheis5IxKVLHg:1653229066758&source=lnms&tbm=shop&sa=X&ved=2ahUKEwi_mIaapvP3AhU3mFYBHSnEB-UQ_AUoAXoECAEQAw&biw=1536&bih=754&dpr=1.25" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--        </div>-->
+<!--        <div class="services__card12">-->
+<!--          <img src="https://cdn.shopify.com/s/files/1/1454/5188/products/1_3_530x@2x.jpg?v=1630552745" alt="img not found">-->
+<!--          <h2>Grooming Kits</h2>-->
+<!--          &lt;!&ndash; <p>Take the leap</p> &ndash;&gt;-->
+<!--          <a href="https://www.google.co.in/search?q=men%27s+grooming+kit+for+oily+skin&sa=X&biw=1536&bih=754&tbm=shop&sxsrf=ALiCzsbS7lzedGg7i8AQ9qv_J3NsepQ_9g%3A1653229336712&ei=GEeKYunPKrS32roP8KG5sA4&ved=0ahUKEwjpu-Kap_P3AhW0m1YBHfBQDuYQ4dUDCAY&uact=5&oq=men%27s+grooming+kit+for+oily+skin&gs_lcp=Cgtwcm9kdWN0cy1jYxADMgUIABCiBDIFCAAQogQ6BwgAELADEBg6CwiuARDKAxCwAxAnSgQIQRgBUPkIWJ4kYJsraAJwAHgAgAGvC4gBiReSAQsyLTEuNS0yLjAuMZgBAKABAcgBA8ABAQ&sclient=products-cc" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--        </div>-->
+
+
+<!--            <br>-->
+<!--            </h3>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+
+
+<!--  {% elif skinType == 'dry' %}-->
+<!--    &lt;!&ndash; Services Section3 male dry&ndash;&gt;-->
+<!--<div class="services" id="services">-->
+<!--  &lt;!&ndash; <h1>Our Services</h1> &ndash;&gt;-->
+<!--  <h1>Recommendations    </h1>-->
+<!--  <div class="services__wrapper">-->
+<!--    <div class="services__card12 cardone">-->
+<!--      <img src="https://www.primandprep.com/wp-content/uploads/2019/05/NIVEA-Men-Maximum-Hydration-Moisturizing-Face-Wash.jpg" alt="img not found" >-->
+<!--      <h2>Face wash</h2>-->
+<!--      &lt;!&ndash; <p>AI Powered techn</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=best+face+wash+for+male+dry+skin&hl=en&sxsrf=ALiCzsZmHUPQgyTlwUnZVUUBOcNMq1TD5w:1653326929842&source=lnms&tbm=shop&sa=X&ved=2ahUKEwib8Obikvb3AhVBSGwGHTGsDgYQ_AUoAXoECAIQAw&biw=1536&bih=754&dpr=1.25" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--    <div class="services__card12 cardtwo">-->
+<!--      <img src="https://www.naturalskinrevival.com/wp-content/uploads/2019/05/IMG_2420-MENH-RFB.jpg" alt="img not found">-->
+<!--      <h2>Creams</h2>-->
+<!--      &lt;!&ndash; <p>Take the leap</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=best+cream+for+male+dry+skin&sa=X&hl=en&biw=1536&bih=754&tbm=shop&sxsrf=ALiCzsZmrBzgJ3701SCJ-poG4unFXyYeuQ%3A1653327053255&ei=zcSLYvHgDsaMseMP6JG5mAM&ved=0ahUKEwix-9Kdk_b3AhVGRmwGHehIDjMQ4dUDCAY&uact=5&oq=best+cream+for+male+dry+skin&gs_lcp=Cgtwcm9kdWN0cy1jYxADMgQIIxAnMgYIABAeEAg6CQgAEB4QsAMQCDoLCK4BEMoDELADECc6CAgAEB4QCBAHOgoIABAeEA0QBRAYSgQIQRgBUKYFWNMOYKAVaAFwAHgAgAHsAogBnAuSAQUyLTMuMpgBAKABAcgBBcABAQ&sclient=products-cc" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; <div class="services__wrapper"> &ndash;&gt;-->
+<!--    <div class="services__card12 cardthree">-->
+<!--      <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcShh7LvkaVFecGVYvfzyFBiyXEWhNa545JX8t6CW-uJcya4sgLuqJyUuEaMu009PNEZN-ocjEG9SBrvAtxPZ7nTergaNeBClZOe7bAfj3aCUThL1m7cwCBi&usqp=CAE" alt="img not found" >-->
+<!--      <h2>Gels and serums</h2>-->
+<!--        &lt;!&ndash; <pttps:>AI Powered techn</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=best+serums+for+male+dry+skin&hl=en&sxsrf=ALiCzsbUS4ejLeO7I9BBcX7Q1kKMNjn2oQ:1653327642261&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjMvsG2lfb3AhWsTGwGHeQ1A3UQ_AUoAXoECAIQAw&biw=1536&bih=754&dpr=1.25" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--    <div class="services__card12 cardfour">-->
+<!--      <img src="https://www.fnp.com/images/pr/l/skin-brightening-gift-hamper-for-men_1.jpg" alt="img not found">-->
+<!--      <h2>Grooming Kits</h2>-->
+<!--      &lt;!&ndash; <p>Take the leap</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=best+grooming+kits+for+male+dry+skin&sa=X&hl=en&biw=1536&bih=754&tbm=shop&sxsrf=ALiCzsY29Aqzx_i8apHUPKXx0JGSTM-HCw%3A1653327644883&ei=HMeLYo2jNZeRseMPtbaamAM&ved=0ahUKEwiNoeG3lfb3AhWXSGwGHTWbBjMQ4dUDCAY&uact=5&oq=best+grooming+kits+for+male+dry+skin&gs_lcp=Cgtwcm9kdWN0cy1jYxADMgUIABCiBDoGCAAQHhAIOggIABAeEAgQBzoICAAQHhAIEBg6BAghEApKBAhBGABQAFjYb2C4c2gGcAB4AYAB6AWIAZpHkgENMC4zLjcuNC40LjQuMpgBAKABAcABAQ&sclient=products-cc" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--        <br>-->
+<!--        </h3>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--{% endif %}-->
+
+
+{% elif gender == 'woman'%}
+  {% if skinType == 'oily' %}
+<!-- Services Section2 woman oily-->
+<!--<div class="services" id="services">-->
+<!--  &lt;!&ndash; <h1>Our Services</h1> &ndash;&gt;-->
+<!--  <h1>Recommendations</h1>-->
+<!--  <div class="services__wrapper">-->
+<!--    <div class="services__card">-->
+<!--      <img src="https://m.media-amazon.com/images/I/717ETOx+sEL._SX522_.jpg" alt="img not found" >-->
+<!--      <h2>Face wash</h2>-->
+<!--      &lt;!&ndash; <p>AI Powered techn</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=face+wash+for+oily+skin+women&sxsrf=ALiCzsYfPjw4bRAebKU-ZGlqXDGVvbCeOA:1653323847055&source=lnms&tbm=shop&sa=X&ved=2ahUKEwiMyuikh_b3AhWmTmwGHTX4CTMQ_AUoAXoECAEQAw&biw=1536&bih=754&dpr=1.25" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--    <div class="services__card">-->
+<!--      <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRjESP8VkBJfD_GDThoaz_HkCyOqx4cbxdukdCkRh20XStf9oBLsaSMPWiOttuPsoW3UOP8aJmsE31NmTWDJZwGbzePvjfDLQ&usqp=CAE" alt="img not found">-->
+<!--      <h2>Creams</h2>-->
+<!--      &lt;!&ndash; <p>Take the leap</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?hl=en&tbm=shop&sxsrf=ALiCzsZRCa6yQ4oECb4vKql9PFN0Ooxxyg:1653324366329&q=cream+for+oily+skin+women&spell=1&sa=X&ved=0ahUKEwjvm7acifb3AhXaUGwGHQkMDDMQBQj2DCgA&biw=1536&bih=754&dpr=1.25" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; <div class="services__wrapper"> &ndash;&gt;-->
+<!--    <div class="services__card">-->
+<!--      <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ5TjSnW4X65NUD6rZyUWKy_4HowM0i7BJNnL1lwSg-XfaxaMX-Apvmj7yBCD1-qM0Yp-AohT-gGGe3FzMPPgNxiiHvK1xoC4ZRluFpUX5iAuI6S8Amp2c2DOrm&usqp=CAE" alt="img not found" >-->
+<!--      <h2>Face packs and masks</h2>-->
+<!--        &lt;!&ndash; <p>AI Powered techn</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=soothing+face+pack+for+female+oily+skin&sa=X&hl=en&biw=1536&bih=754&tbm=shop&sxsrf=ALiCzsZCV4hLtrvrRZtIR38B2aCFaZzB7Q%3A1653325031567&ei=57yLYpbvIYeRseMPrO63mAM&ved=0ahUKEwjW_tDZi_b3AhWHSGwGHSz3DTMQ4dUDCAY&uact=5&oq=soothing+face+pack+for+female+oily+skin&gs_lcp=Cgtwcm9kdWN0cy1jYxADMgUIABCiBDIFCAAQogQ6BwgjELADECc6CAgAEIAEELADOgcIABCwAxAYOgsIrgEQygMQsAMQJzoECAAQDToGCAAQDRAYSgQIQRgBUPMtWOqXAWCUmwFoA3AAeACAAd4GiAHcQpIBDTAuMS4yLjIuMy4yLjaYAQCgAQHIAQ3AAQE&sclient=products-cc" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--    <div class="services__card">-->
+<!--      <img src="https://cdn.shopify.com/s/files/1/0428/8063/0937/products/220041607_248625650117491_8662883787454787691_n_600x.jpg?v=1637991878https://cdn.shopify.com/s/files/1/0428/8063/0937/files/LOTUS_FAMILY_SHOOT_0159232_b2e285cc-50ef-4145-9279-4fc1955a947e_370x230@2x.jpg?v=1600775252" alt="img not found">-->
+<!--      <h2>Facial Kits</h2>-->
+<!--      &lt;!&ndash; <p>Take the leap</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=best+facial+kits+for+female+oily+skin&sxsrf=ALiCzsaZWWJ-srXQcKrfMNA3T6bmgzUd9w:1653325454274&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjCspmjjfb3AhWKTmwGHT9nD9EQ_AUoAXoECAIQAw&biw=1536&bih=754&dpr=1.25" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--        <br>-->
+<!--        </h3>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--{% elif skinType == 'dry' %}-->
+<!--&lt;!&ndash; Services Section4  Woman dry&ndash;&gt;-->
+<!--<div class="services" id="services">-->
+<!--  &lt;!&ndash; <h1>Our Services</h1> &ndash;&gt;-->
+<!--  <h1>Recommendations    </h1>-->
+<!--  <div class="services__wrapper">-->
+<!--    <div class="services__card">-->
+<!--      <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRChQMWRO_vrpPzp-1qjcAW0FC_hdtujiKlz_uTbTyOiiH8VsGhA4d06WEPvkT-05q9ApCpRc4VMEP6vPg0jEjQQYal04L8NYGrckfaEPYt-_3z_N1r8S2-wg&usqp=CAE" alt="img not found" >-->
+<!--      <h2>Face wash</h2>-->
+<!--      &lt;!&ndash; <p>AI Powered techn</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=best+face+wash+for+female+dry+skin&sxsrf=ALiCzsa1klfg8rCh6uQRVqfycYrRN8nsVQ:1653329151666&source=lnms&tbm=shop&sa=X&ved=2ahUKEwjyrKCGm_b3AhVES2wGHQZkCzMQ_AUoAXoECAEQAw&biw=1536&bih=754&dpr=1.25" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--    <div class="services__card">-->
+<!--      <img src="https://cdn.shopify.com/s/files/1/0034/7901/1441/products/web-image3_700x.jpg?v=1646657261" alt="img not found">-->
+<!--      <h2>Creams</h2>-->
+<!--      &lt;!&ndash; <p>Take the leap</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=best+cream+for+female+dry+skin&sa=X&biw=1536&bih=754&tbm=shop&sxsrf=ALiCzsa4niTSlE8tpiejMZYpe2Uv1DDeiw%3A1653329160216&ei=CM2LYsO4DLOVseMPtdOKwAo&ved=0ahUKEwjD3KmKm_b3AhWzSmwGHbWpAqgQ4dUDCAY&uact=5&oq=best+cream+for+female+dry+skin&gs_lcp=Cgtwcm9kdWN0cy1jYxADMgYIABAeEAg6CQgAEB4QsAMQCDoLCK4BEMoDELADECc6BQgAEKIEOggIABAeEAgQBzoECCEQCkoECEEYAVC1BFjmNWDvRWgCcAB4AIABrQSIAdIWkgEJMi0zLjIuMi4xmAEAoAEByAEGwAEB&sclient=products-cc" target="_blank"><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; <div class="services__wrapper"> &ndash;&gt;-->
+<!--    <div class="services__card">-->
+<!--      <img src="https://haappyherbs.com/wp-content/uploads/2021/10/face-pack-460x460.jpg" alt="img not found" >-->
+<!--      <h2>Face packs and masks</h2>-->
+<!--        &lt;!&ndash; <p>AI Powered techn</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=best+face+packs+for+female+dry+skin&bih=754&biw=1536&hl=en&sxsrf=ALiCzsaBhmUfFJs1UEliCV20WjWacenGeg:1653330120374&source=lnms&tbm=shop&sa=X&ved=2ahUKEwi_zZXUnvb3AhX_TmwGHZsUCDMQ_AUoAXoECAEQAw" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--    <div class="services__card">-->
+<!--      <img src="https://cdn.shopify.com/s/files/1/2028/2057/files/skin_hero4step.png?v=1649155800" alt="img not found">-->
+<!--      <h2>Facial Kits</h2>-->
+<!--      &lt;!&ndash; <p>Take the leap</p> &ndash;&gt;-->
+<!--      <a href="https://www.google.com/search?q=best+facial+kit+for+female+dry+skin&sa=X&bih=754&biw=1536&hl=en&tbm=shop&sxsrf=ALiCzsbeCvika5DW5sn1Muzr2j6GVX11xw%3A1653330122974&ei=ytCLYvPwOq6eseMPi5uHmAM&ved=0ahUKEwjz_bPVnvb3AhUuT2wGHYvNATMQ4dUDCAY&uact=5&oq=best+facial+kit+for+female+dry+skin&gs_lcp=Cgtwcm9kdWN0cy1jYxADMgUIABCiBDIFCAAQogQyBQgAEKIEOgsIrgEQygMQsAMQJzoECCEQCkoECEEYAVC1BljPKGDsNWgBcAB4AIABowaIAbMlkgELMi0yLjIuMS40LjGYAQCgAQHIAQTAAQE&sclient=products-cc" target="_blank" ><div class="services__btn"><button>See More...</button></div></a>-->
+<!--    </div>-->
+<!--        <br>-->
+<!--        </h3>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--{% endif %}-->
+
+
+<!--{% else %}-->
+<!--Don't understand!-->
+<!--{% endif %}-->
+
+<div class="remedies_button" id="remedies">
+  <a href="https://www.indiatvnews.com/lifestyle/beauty-skin-care-tips-7-effective-home-remedies-for-healthy-and-flawless-skin-466671" target="_blank">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Home Remedies
+  </a>
+</div>
+
+
+
+<link rel="stylesheet" href="static\css\main.css">
+      </div>
+        <div class = "products" id="services">
+            <div class = "container">
+                <h1 class = "lg-title">Special Skin Products With Offers</h1>
+                <p class = "text-light">Here are some of the best products handpicked according to your skintype</p>
+                <p class = "text-light">Because..... "Beauty is in the skin"</p>
+
+                <div class = "product-items">
+                    {% if gender == 'man'%}
+                        {% if skinType == 'oily' %}
+                                <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/51QsQUvQrqL._SL1000_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <a href="https://www.amazon.in/Nivea-Dark-Spot-Reduction-Facewash/dp/B006LX9VPU/ref=sr_1_5_f3_0o_fs?almBrandId=ctnow&fpw=alm&keywords=nivea+face+wash&qid=1653728463&sprefix=nivea+fa%2Caps%2C365&sr=8-5">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Nivea, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/51W3tFhF5-L._SL1000_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <a href="https://www.amazon.in/Garnier-Acno-Fight-Face-Wash/dp/B007921JYI/ref=sr_1_6?keywords=garnier+face+wash&qid=1653827768&sprefix=Garnier+fa%2Caps%2C428&sr=8-6">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Garnier, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://www.jiomart.com/images/product/600x600/491229717/pond-s-men-pollution-out-face-wash-100-g-product-images-o491229717-p491229717-1-202203152034.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <a href="https://www.amazon.in/Ponds-Pollution-Face-Wash-100g/dp/B00XTTME9Y/ref=sr_1_10_f3_0o_fs?almBrandId=ctnow&crid=33ING31F1R6S&fpw=alm&keywords=POND%27S+face+wash&qid=1653827802&sprefix=pond+s%2Caps%2C294&sr=8-10">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">POND'S, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://cdn.shopify.com/s/files/1/0272/4714/9155/products/himalaya-men-pimple-clear-neem-face-wash_800x.jpg?v=1627641459" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <a href="https://www.amazon.in/Himalaya-Herbals-Purifying-Neem-150ml/dp/B010Z0LH8I/ref=sr_1_4_f3_wg?almBrandId=ctnow&crid=15LMOW48UC60D&fpw=alm&keywords=Himalaya+face+wash&qid=1653827832&s=nowstore&sprefix=himalaya%2Cnowstore%2C294&sr=1-4">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Himalaya, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+
+                        {% elif skinType == 'dry' %}
+                                <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://rukminim2.flixcart.com/image/416/416/kl6wx3k0/moisturizer-cream/e/j/9/30-men-fresh-face-moisturizer-gel-non-sticky-light-original-imagydem54gybmhg.jpeg?q=70" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bigbasket.com%2Fpd%2F40078018%2Fnivea-men-creme-non-greasy-moisturizer-cream-for-face-body-hands-75-ml%2F&psig=AOvVaw3lVsUbQk7jboJf37qsCCI1&ust=1653913461359000&source=images&cd=vfe&ved=0CAwQjRxqGAoTCKib1PfZhPgCFQAAAAAdAAAAABCjAQ">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name"> Nivea,Moisturiser Non-Sticky Gel</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/51h2fKU8AcL._SY355_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.in%2FPonds-Men-Control-Face-Cr%25C3%25A8me%2Fdp%2FB07TG38JN4&psig=AOvVaw3lVsUbQk7jboJf37qsCCI1&ust=1653913461359000&source=images&cd=vfe&ved=0CAwQjRxqGAoTCKib1PfZhPgCFQAAAAAdAAAAABCqAQ">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name"> POND'S, Oil Control Face Crème</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://rukminim2.flixcart.com/image/416/416/kdxfc7k0/moisturizer-cream/c/7/h/75-men-care-ultra-hydra-hydrating-moisturizer-face-hands-body-original-imafuq8w3fvbkarn.jpeg?q=70" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flipkart.com%2Fdove-men-care-ultra-hydra-hydrating-moisturizer-face-hands-body%2Fp%2Fitm6094015aec712&psig=AOvVaw3lVsUbQk7jboJf37qsCCI1&ust=1653913461359000&source=images&cd=vfe&ved=0CAwQjRxqGAoTCKib1PfZhPgCFQAAAAAdAAAAABCdAQ">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Dove, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://ik.imagekit.io/hng/pdp/560640_2.jpg?v=1" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhealthandglow.com%2Fnivea-men-fresh-gel-30ml%2Fp%2FNTYwNjQw&psig=AOvVaw3lVsUbQk7jboJf37qsCCI1&ust=1653913461359000&source=images&cd=vfe&ved=0CAwQjRxqGAoTCKib1PfZhPgCFQAAAAAdAAAAABCWAQ">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Nivea Men Fresh Gel</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+
+                        {% endif %}
+
+
+                    {% elif gender == 'woman'%}
+                        {% if skinType == 'dry' %}
+                                <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/61LmABL6JKL._SY355_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Nivea, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://www.businessinsider.in/thumb/msid-77721370,width-640,resizemode-4/Master.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Biotique, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://onemg.gumlet.io/image/upload/l_watermark_346,w_240,h_240/a_ignore,w_240,h_240,c_fit,q_auto,f_auto/v1558723687/nzwn7jat8gafr4hkqtj2.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Clean & Clear, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://5.imimg.com/data5/AL/IV/MY-65184658/himalaya-herbals-neem-face-wash-500x500.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <a href="http://www.google.com/">
+                                               <button type = "button" class = "btn-cart"> add to cart
+                                                <span><i class = "fas fa-plus"></i></span>
+                                            </button>
+                                            <button type = "button" class = "btn-buy"> buy now
+                                                <span><i class = "fas fa-shopping-cart"></i></span>
+                                            </button>
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Himalaya, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+
+                        {% elif skinType == 'oily' %}
+                                <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://m.media-amazon.com/images/I/61LmABL6JKL._SY355_.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Nivea, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://www.businessinsider.in/thumb/msid-77721370,width-640,resizemode-4/Master.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Biotique, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://onemg.gumlet.io/image/upload/l_watermark_346,w_240,h_240/a_ignore,w_240,h_240,c_fit,q_auto,f_auto/v1558723687/nzwn7jat8gafr4hkqtj2.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Clean & Clear, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+                            <!-- single product -->
+                            <div class = "product">
+                                <div class = "product-content">
+                                    <div class = "product-img">
+                                        <img src = "https://5.imimg.com/data5/AL/IV/MY-65184658/himalaya-herbals-neem-face-wash-500x500.jpg" alt = "product image">
+                                    </div>
+                                    <div class = "product-btns">
+                                        <button type = "button" class = "btn-cart"> add to cart
+                                            <span><i class = "fas fa-plus"></i></span>
+                                        </button>
+                                        <button type = "button" class = "btn-buy"> buy now
+                                            <span><i class = "fas fa-shopping-cart"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class = "product-info">
+                                    <div class = "product-info-top">
+                                        <h2 class = "sm-title">Skin care</h2>
+                                        <div class = "rating">
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "fas fa-star"></i></span>
+                                            <span><i class = "far fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <a href = "#" class = "product-name">Himalaya, new product</a>
+                                    <p class = "product-price">₹ 150.00</p>
+                                    <p class = "product-price">₹ 133.00</p>
+                                </div>
+
+                                <div class = "off-info">
+                                    <h2 class = "sm-title">25% off</h2>
+                                </div>
+                            </div>
+                            <!-- end of single product -->
+
+                        {% endif %}
+
+
+                    {% else %}
+                    Don't understand!
+                    {% endif %}
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class = "product-collection">
+            <div class = "container">
+                <div class = "product-collection-wrapper">
+                    <!-- product col left -->
+                    <div class = "product-col-left flex">
+                        <div class = "product-col-content">
+                            <h2 class = "sm-title">men's Skin Products </h2>
+                            <h2 class = "md-title">men's collection </h2>
+                            <p class = "text-light">Total sale on men's skin care products.</p>
+                            <button type = "button" class = "btn-dark">Shop now</button>
+                        </div>
+                    </div>
+
+                    <!-- product col right -->
+                    <div class = "product-col-right">
+                        <div class = "product-col-r-top flex">
+                            <div class = "product-col-content">
+                                <h2 class = "sm-title">women's skin products </h2>
+                                <h2 class = "md-title">women's collection </h2>
+                                <p class = "text-light">Total sale on womans's skin care products.</p>
+                                <button type = "button" class = "btn-dark">Shop now</button>
+                            </div>
+                        </div>
+
+                        <div class = "product-col-r-bottom">
+                            <!-- left -->
+                            <div class = "flex">
+                                <div class = "product-col-content">
+                                    <h2 class = "sm-title">summer sale </h2>
+                                    <h2 class = "md-title">Extra 50% Off </h2>
+                                    <p class = "text-light">BIG BILLION DAYS!!! Greatest SALE of all time this summer.</p>
+                                    <button type = "button" class = "btn-dark">Shop now</button>
+                                </div>
+                            </div>
+                            <!-- right -->
+                            <div class = "flex">
+                                <div class = "product-col-content">
+                                    <h2 class = "sm-title">Skin care </h2>
+                                    <h2 class = "md-title">best sellers </h2>
+                                    <p class = "text-light">BEST SELLERS who are dominating the skin industry.</p>
+                                    <button type = "button" class = "btn-dark">Shop now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Features Section
+    <div class="main" id="sign-up">
+      <div class="main__container">
+        <div class="main__content">
+          <h1>Join US</h1>
+          <h2>Sign Up Today</h2>
+          <p>See what makes us different</p>
+          <button class="main__btn"><a href="#">Sign Up</a></button>
+        </div>
+        <div class="main__img--container">
+          <div class="main__img--card" id="card-2">
+            <i class="fas fa-users"></i>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Footer Section -->
+    <!-- <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__links--wrapper">
+          <div class="footer__links--items">
+            <h2>Contact Us</h2>
+            <a href=#">Contact</a>
+            <a href=#">Support</a>
+            <a href=#">Destinations</a>
+          </div>
+          <div class="footer__links--items">
+            <h2>Videos</h2>
+            <a href=#">Submit Video</a>
+            <a href=#">Ambassador</a>
+            <a href=#">Agency</a>
+          </div>
+        </div>
+        <div class="footer__links--wrapper">
+          <div class="footer__links--items">
+            <h2>Social Media</h2>
+            <a href=#">Github</a>
+            <a href=#">Twitter</a>
+            <a href=#">Instagram</a>
+            <a href=#">Youtube</a>
+            <a href=#">LinkedIn</a>
+          </div>
+          <div class="footer__links--items">
+            <h2>About Us</h2>
+            <a href=#">How it works</a>
+            <a href=#">Testimonials</a>
+            <a href=#">Careers</a>
+            <a href=#">Terms of Service</a>
+          </div>
+        </div>
+      </div> -->
+<!--    <div class="footer__container">  -->
+<!--      <section class="social__media">-->
+<!--        <div class="social__media&#45;&#45;wrap">-->
+<!--          <div class="footer__logo">-->
+<!--            <a href="#" id="footer__logo">KAS</a>-->
+<!--          </div>-->
+<!--          <p class="website__rights">-->
+<!--            © Maithili 2022. <br />-->
+<!--            All rights reserved-->
+<!--          </p>-->
+<!--          <div class="social__icons">-->
+<!--            <a href="https://github.com/maithili-31" class="social__icons&#45;&#45;link" target="_blank"-->
+<!--              ><i class="fab fa-github"></i-->
+<!--            ></a>-->
+<!--            <a href="#" class="social__icons&#45;&#45;link" target="_blank"-->
+<!--              ><i class="fab fa-youtube"></i-->
+<!--            ></a>-->
+<!--            &lt;!&ndash; <a href="#" class="social__icons&#45;&#45;link" target="_blank"-->
+<!--              ><i class="fab fa-instagram"></i-->
+<!--            ></a> &ndash;&gt;-->
+<!--            <a href="#" class="social__icons&#45;&#45;link" target="_blank"-->
+<!--              ><i class="fab fa-youtube"></i-->
+<!--            ></a>-->
+<!--            <a href="https://www.linkedin.com/in/maithili-chhallani-a10641215" class="social__icons&#45;&#45;link" target="_blank"-->
+<!--              ><i class="fab fa-linkedin"></i></a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--    </div>-->
+<script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+	<footer>
+		<div class="row">
+		  <div class="col span-1-of-2">
+			<ul class="footer-nav">
+			  <li><a href="#about">About Us</a></li>
+			  <li>
+				<a href="#" target="blank"
+				  >Blogs</a
+				>
+			  </li>
+			  <li>
+				<a
+				  href="#"
+				  target="blank"
+				  >Doc Web</a
+				>
+			  </li>
+			</ul>
+		  </div>
+
+		  <div class="col span-1-of-2">
+			<ul class="social-links">
+			  <li>
+				<a href="https://github.com/maithili-31" target="blank"
+				  ><ion-icon name="logo-github" class="github"></ion-icon
+				></a>
+			  </li>
+			  <li>
+				<a
+				  href="https://www.linkedin.com/in/maithili-chhallani-a10641215/"
+				  target="blank"
+				  ><ion-icon name="logo-linkedin" class="lin"></ion-icon
+				></a>
+			  </li>
+			  <li>
+				<a href="mailto:#"
+				  ><ion-icon name="mail-outline" class="gm"></ion-icon
+				></a>
+			  </li>
+			  <li>
+				<a href="#" target="blank"
+				  ><ion-icon name="logo-instagram" class="ig"></ion-icon
+				></a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+
+		<div class="row">
+		  <p class="p">
+			Copyright &copy; 2022 &mdash; Maithili <br />
+			All rights reserved.
+		  </p>
+		</div>
+	  </footer>
+
+
+          <style>
+        /* Footer */
+footer {
+  /* background-color: rgb(43, 41, 41); */
+  background-color: rgb(19, 2, 2);
+  padding: 45px 0 15px 0;
+  font-size: 100%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+  padding-left: 9px;
+}
+
+.social-links {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+  margin: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: rgb(175, 172, 172);
+  transition: color 0.3s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: white;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto 0 auto;
+}
+
+.p {
+  color: rgba(255, 255, 255, 0.671);
+  text-align: center;
+  margin-top: 60px;
+}
+
+.p:hover {
+  color: white;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 160%;
+}
+
+.github,
+.gm,
+.ig,
+.lin {
+  transition: color 0.3s;
+}
+
+.github:hover {
+  color: white;
+}
+
+.gm:hover {
+  color: white;
+}
+.ig:hover {
+  color: white;
+}
+.lin:hover {
+  color: white;
+}
+
+footer p {
+  cursor: context-menu;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
+  .Auxilium {
+    padding-top: 0px;
+  }
+
+  .Auxilium h2 {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 500px;
+		  margin-right: 500px; */
+    margin-left: 20vw;
+    margin-right: 20vw;
+    padding-bottom: 15px;
+
+    border-bottom: 5px solid rgb(237, 247, 247);
+  }
+
+  .about-para {
+    font-size: 21px;
+  }
+
+  .system {
+    padding-top: 50px;
+    margin-top: 25px;
+    /* padding-left: 140px; */
+    margin-left: 12vw;
+    margin-right: 8vw;
+    width: 75vw;
+    height: 55vh; /* 650px; */
+  }
+
+  /* Footer */
+  .footer-nav {
+    display: none;
+  }
+
+  .social-links {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+      </style>
+
+<script>
+		// $(document).ready(function(){
+			// 	$('div#loading').removeAttr('id');
+		// });
+		var preloader = document.getElementById("loading");
+		// window.addEventListener('load', function(){
+		// 	preloader.style.display = 'none';
+		// 	})
+
+		function myFunction(){
+			preloader.style.display = 'none';
+		};
+	</script>
+
+    <script src="./static/js/analysis_script.js"></script>
+  </body>
+</html>

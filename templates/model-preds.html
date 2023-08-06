@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Preds</title>
+</head>
+<body>
+{% if gender == 'man'%}
+
+        <div class="person">
+      <div class="container">
+        <div class="container-inner">
+          <img
+            class="circle"
+            src="https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000"/>
+          <img
+            class="img img2"
+            src="https://banner2.cleanpng.com/20190820/bcy/transparent-face-head-chin-male-cartoon-5d67f3a87955d2.062787371567093672497.jpg"/>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="name">Gender: {{ gender }}</div>
+      <div class="title">Skin Type: {{ skinType }}</div>
+    </div>
+    </div>
+{% endif %}
+
+
+{% if gender == 'woman'%}
+
+        <div class="person">
+      <div class="container">
+        <div class="container-inner">
+          <img
+            class="circle"
+            src="https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000"/>
+          <img
+            class="img img2"
+            src="data:image/jpeg;base64,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"/>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="name">Gender: {{ gender }}</div>
+      <div class="title">Skin Type: {{ skinType }}</div>
+    </div>
+    </div>
+{% endif %}
+
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+
+.person {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+.container {
+  border-radius: 50%;
+  height: 312px;
+  -webkit-tap-highlight-color: transparent;
+  transform: scale(0.48);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 400px;
+}
+.container:after {
+  background-color: #f2f2f2;
+  content: "";
+  height: 10px;
+  position: absolute;
+  top: 390px;
+  width: 100%;
+}
+.container:hover {
+  transform: scale(0.54);
+}
+.container-inner {
+  clip-path: path(
+    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+  );
+  position: relative;
+  transform-origin: 50%;
+  top: -200px;
+}
+.circle {
+  background-color: #fee7d3;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 380px;
+  left: 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 210px;
+  width: 380px;
+}
+.img {
+  pointer-events: none;
+  position: relative;
+  transform: translateY(20px) scale(1.15);
+  transform-origin: 50% bottom;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container:hover .img {
+  transform: translateY(0) scale(1.2);
+}
+.img1 {
+  left: 22px;
+  top: 164px;
+  width: 340px;
+}
+.img2 {
+  left: -46px;
+  top: 174px;
+  width: 444px;
+}
+.img3 {
+  left: -16px;
+  top: 144px;
+  width: 466px;
+}
+.divider {
+  background-color: #ca6060;
+  height: 1px;
+  width: 160px;
+}
+.name {
+  color: #404245;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 16px;
+  text-align: center;
+}
+.title {
+  color: #6e6e6e;
+  font-family: arial;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+    </style>
+
+</body>
+<body>
+
+
+
+    <h1>Gender: {{ gender }}</h1>
+    <h1>Skin Type: {{ skinType }}</h1>
+
+
+{% if gender == 'man'%}
+    <div>man man</div>
+    {% if skinType == 'dry' %}
+    <div>manni manni dryee</div>
+
+    {% endif %}
+
+
+{% elif gender == 'woman'%}
+    <div>woman woman</div>
+    {% if skinType == 'dry' %}
+    <div>wommi wommi dryee</div>
+    {% endif %}
+
+{% elif gender == 'man' %}
+    <div>man man</div>
+    {% if skinType == 'dry' %}
+    <div>mmi mmi oily</div>
+    {% endif %}
+
+{% elif gender == 'woman' %}
+    <div>woman woman</div>
+    {% if skinType == 'dry' %}
+    <div>wommi wommi oily</div>
+    {% endif %}
+
+{% else %}
+Don't understand!
+{% endif %}
+
+</body>
+
+</html>
